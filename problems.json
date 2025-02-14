@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Output Hello Kitty!",
+    "description": "Write a program that prints 'Hello Kitty! :3' to the console using System.out.println.",
+    "inputFormat": "None",
+    "outputFormat": "A single line: 'Hello Kitty! :3'",
+    "constraints": "None",
+    "testCases": [
+      {
+        "input": "None",
+        "output": "Hello Kitty! :3"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Output a Greeting",
+    "description": "Write a program that prints 'Good morning, world!' to the console using System.out.print.",
+    "inputFormat": "None",
+    "outputFormat": "A single line: 'Good morning, world!'",
+    "constraints": "None",
+    "testCases": [
+      {
+        "input": "None",
+        "output": "Good morning, world!"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Formatted Output",
+    "description": "Write a program that prints the value of Pi as 3.14 using System.out.printf.",
+    "inputFormat": "None",
+    "outputFormat": "A single line: 'Pi is approximately 3.14'",
+    "constraints": "None",
+    "testCases": [
+      {
+        "input": "None",
+        "output": "Pi is approximately 3.14"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Print an Integer",
+    "description": "Write a program that declares an integer variable with the value 42 and prints it using System.out.println.",
+    "inputFormat": "None",
+    "outputFormat": "A single line: 'The integer is 42'",
+    "constraints": "None",
+    "testCases": [
+      {
+        "input": "None",
+        "output": "The integer is 42"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Print a Double",
+    "description": "Write a program that declares a double variable with the value 3.14159 and prints it using System.out.println.",
+    "inputFormat": "None",
+    "outputFormat": "A single line: 'The double is 3.14159'",
+    "constraints": "None",
+    "testCases": [
+      {
+        "input": "None",
+        "output": "The double is 3.14159"
+      }
+    ]
+  }
+]

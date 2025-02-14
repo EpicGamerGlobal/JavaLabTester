@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Problem</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.14/ace.js"></script>
+</head>
+<body>
+<header>
+    <h1 id="problem-title">Loading...</h1>
+    <a href="/problems">Back to Problems</a>
+</header>
+<main>
+    <p id="problem-description">Loading problem details...</p>
+    <h4>Example Test Cases</h4>
+    <ul id="test-cases"></ul>
+
+    <div id="editor-container">
+        <h3>Write Your Code:</h3>
+        <div id="editor" style="height: 300px; width: 100%;"></div>
+        <button id="run-button">Run Code</button>
+    </div>
+
+    <div id="output-container">
+        <h3>Output:</h3>
+        <div id="output"></div>
+    </div>
+</main>
+<script src="problem.js"></script>
+</body>
+</html>

@@ -47,3 +47,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });
 });
+
+//hints and solutions
+let hintsUsed = 0;
+
+document.getElementById('hint-button').addEventListener('click', () => {
+    if (hintsUsed < 2) {
+        document.getElementById('hint-' + hintsUsed).style.display = 'block';
+        hintsUsed++;
+    }
+    if (hintsUsed === 2) {
+        document.getElementById('solution-button').style.display = 'block';
+    }
+});
+
+document.getElementById('solution-button').addEventListener('click', () => {
+    document.getElementById('solution').style.display = 'block';
+});
+

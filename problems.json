@@ -1,71 +1,210 @@
 [
   {
     "id": 1,
-    "title": "Output Hello Kitty!",
-    "description": "Write a program that prints 'Hello Kitty! :3' to the console using System.out.println.",
-    "inputFormat": "None",
-    "outputFormat": "A single line: 'Hello Kitty! :3'",
-    "constraints": "None",
+    "title": "Print Hello World",
+    "description": "Write a program that prints 'Hello, World!' to the console.",
+    "difficulty": "Very Easy",
+    "hints": [
+      "Use System.out.println()",
+      "Ensure output matches exactly"
+    ],
+    "solution": "public class Main { public static void main(String[] args) { System.out.println(\"Hello, World!\"); } }",
     "testCases": [
       {
         "input": "None",
-        "output": "Hello Kitty! :3"
+        "output": "Hello, World!"
       }
     ]
   },
   {
     "id": 2,
-    "title": "Output a Greeting",
-    "description": "Write a program that prints 'Good morning, world!' to the console using System.out.print.",
-    "inputFormat": "None",
-    "outputFormat": "A single line: 'Good morning, world!'",
-    "constraints": "None",
+    "title": "Print Your Name",
+    "description": "Write a program that prints your name to the console.",
+    "difficulty": "Very Easy",
+    "hints": [
+      "Use System.out.println()",
+      "Replace the string with your actual name"
+    ],
+    "solution": "public class Main { public static void main(String[] args) { System.out.println(\"John Doe\"); } }",
     "testCases": [
       {
         "input": "None",
-        "output": "Good morning, world!"
+        "output": "John Doe"
       }
     ]
   },
   {
     "id": 3,
-    "title": "Formatted Output",
-    "description": "Write a program that prints the value of Pi as 3.14 using System.out.printf.",
-    "inputFormat": "None",
-    "outputFormat": "A single line: 'Pi is approximately 3.14'",
-    "constraints": "None",
+    "title": "Sum of Two Numbers",
+    "description": "Write a program that takes two integers as input and prints their sum.",
+    "difficulty": "Easy",
+    "hints": [
+      "Use Scanner to take input",
+      "Add the two numbers"
+    ],
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int a = sc.nextInt(); int b = sc.nextInt(); System.out.println(a + b); } }",
     "testCases": [
       {
-        "input": "None",
-        "output": "Pi is approximately 3.14"
+        "input": "3 5",
+        "output": "8"
+      },
+      {
+        "input": "10 20",
+        "output": "30"
       }
     ]
   },
   {
     "id": 4,
-    "title": "Print an Integer",
-    "description": "Write a program that declares an integer variable with the value 42 and prints it using System.out.println.",
-    "inputFormat": "None",
-    "outputFormat": "A single line: 'The integer is 42'",
-    "constraints": "None",
+    "title": "Multiply Two Numbers",
+    "description": "Write a program that takes two integers as input and prints their product.",
+    "difficulty": "Easy",
+    "hints": [
+      "Use Scanner to take input",
+      "Multiply the two numbers"
+    ],
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int a = sc.nextInt(); int b = sc.nextInt(); System.out.println(a * b); } }",
     "testCases": [
       {
-        "input": "None",
-        "output": "The integer is 42"
+        "input": "2 4",
+        "output": "8"
+      },
+      {
+        "input": "7 3",
+        "output": "21"
       }
     ]
   },
   {
     "id": 5,
-    "title": "Print a Double",
-    "description": "Write a program that declares a double variable with the value 3.14159 and prints it using System.out.println.",
-    "inputFormat": "None",
-    "outputFormat": "A single line: 'The double is 3.14159'",
-    "constraints": "None",
+    "title": "Check Even or Odd",
+    "description": "Write a program that checks whether a number is even or odd.",
+    "difficulty": "Easy",
+    "hints": [
+      "Use modulus operator %",
+      "If a number is divisible by 2, it's even"
+    ],
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int n = sc.nextInt(); if (n % 2 == 0) { System.out.println(\"Even\"); } else { System.out.println(\"Odd\"); } } }",
     "testCases": [
       {
-        "input": "None",
-        "output": "The double is 3.14159"
+        "input": "4",
+        "output": "Even"
+      },
+      {
+        "input": "7",
+        "output": "Odd"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Find the Larger Number",
+    "description": "Write a program that takes two numbers and prints the larger one.",
+    "difficulty": "Easy",
+    "hints": [
+      "Use an if-else statement",
+      "Compare the two numbers"
+    ],
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int a = sc.nextInt(); int b = sc.nextInt(); System.out.println(a > b ? a : b); } }",
+    "testCases": [
+      {
+        "input": "8 12",
+        "output": "12"
+      },
+      {
+        "input": "20 10",
+        "output": "20"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Check Positive, Negative, or Zero",
+    "description": "Write a program that checks if a number is positive, negative, or zero.",
+    "difficulty": "Easy",
+    "hints": [
+      "Use an if-else statement",
+      "Compare the number with 0"
+    ],
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int n = sc.nextInt(); if (n > 0) { System.out.println(\"Positive\"); } else if (n < 0) { System.out.println(\"Negative\"); } else { System.out.println(\"Zero\"); } } }",
+    "testCases": [
+      {
+        "input": "5",
+        "output": "Positive"
+      },
+      {
+        "input": "-3",
+        "output": "Negative"
+      },
+      {
+        "input": "0",
+        "output": "Zero"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Simple Grade Calculator",
+    "description": "Write a program that takes a student's score and prints their grade (A, B, C, D, or F).",
+    "difficulty": "Easy",
+    "hints": [
+      "Use multiple if-else statements",
+      "Compare the score with grade thresholds"
+    ],
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int score = sc.nextInt(); if (score >= 90) { System.out.println(\"A\"); } else if (score >= 80) { System.out.println(\"B\"); } else if (score >= 70) { System.out.println(\"C\"); } else if (score >= 60) { System.out.println(\"D\"); } else { System.out.println(\"F\"); } } }",
+    "testCases": [
+      {
+        "input": "85",
+        "output": "B"
+      },
+      {
+        "input": "72",
+        "output": "C"
+      },
+      {
+        "input": "95",
+        "output": "A"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Leap Year Checker",
+    "description": "Write a program that checks if a given year is a leap year.",
+    "difficulty": "Medium",
+    "hints": [
+      "A leap year is divisible by 4 but not 100 unless also divisible by 400"
+    ],
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int year = sc.nextInt(); if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) { System.out.println(\"Leap Year\"); } else { System.out.println(\"Not a Leap Year\"); } } }",
+    "testCases": [
+      {
+        "input": "2024",
+        "output": "Leap Year"
+      },
+      {
+        "input": "1900",
+        "output": "Not a Leap Year"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Simple Calculator",
+    "description": "Write a program that performs addition, subtraction, multiplication, or division based on user input.",
+    "difficulty": "Medium",
+    "hints": [
+      "Use switch-case to handle different operations",
+      "Take two numbers and an operator as input"
+    ],
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int a = sc.nextInt(); int b = sc.nextInt(); char op = sc.next().charAt(0); switch(op) { case '+': System.out.println(a + b); break; case '-': System.out.println(a - b); break; case '*': System.out.println(a * b); break; case '/': System.out.println(a / b); break; default: System.out.println(\"Invalid operator\"); } } }",
+    "testCases": [
+      {
+        "input": "5 3 +",
+        "output": "8"
+      },
+      {
+        "input": "10 2 /",
+        "output": "5"
       }
     ]
   }

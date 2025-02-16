@@ -58,6 +58,16 @@ table#problems-table tbody tr:hover {
     color: #2e7d32;
 }
 
+.difficulty.medium {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+.difficulty.hard {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
 button {
     padding: 8px 16px;
     background-color: #007bff;
@@ -70,4 +80,10 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.solved-indicator {
+    color: green;
+    font-weight: bold;
+    margin-left: 10px;
 }

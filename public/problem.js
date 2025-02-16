@@ -1,3 +1,6 @@
+let hintsUsed = 0;
+let startTime;
+
 document.addEventListener('DOMContentLoaded', async () => {
     const problemId = window.location.pathname.split('/').pop();
 
@@ -6,8 +9,6 @@ document.addEventListener('DOMContentLoaded', async () => {
         if (!response.ok) throw new Error('Failed to load problem.');
 
         const problem = await response.json();
-
-        // ✅ Ensure problem data loads before updating the page
         document.getElementById('problem-title').textContent = problem.title;
         document.getElementById('problem-description').textContent = problem.description;
 
@@ -16,7 +17,22 @@ document.addEventListener('DOMContentLoaded', async () => {
             <li><strong>Input:</strong> ${test.input} <br> <strong>Expected Output:</strong> ${test.output}</li>
         `).join('');
 
-        // ✅ Initialize Ace Editor only after problem loads
+        // Store hints and solution
+        document.getElementById('hint-button').addEventListener('click', () => {
+            if (hintsUsed < problem.hints.length) {
+                document.getElementById('hint-text').textContent = problem.hints[hintsUsed];
+                hintsUsed++;
+            }
+            if (hintsUsed === problem.hints.length) {
+                document.getElementById('solution-button').style.display = 'block';
+            }
+        });
+
+        document.getElementById('solution-button').addEventListener('click', () => {
+            document.getElementById('solution-text').textContent = problem.solution;
+            document.getElementById('solution-text').style.display = 'block';
+        });
+
         setTimeout(() => {
             const editor = ace.edit('editor');
             editor.setTheme('ace/theme/monokai');
@@ -29,6 +45,9 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     document.getElementById('run-button').addEventListener('click', async () => {
+        startTime = new Date();
+        document.getElementById('compilation-time').textContent = "Compiling...";
+
         const code = ace.edit('editor').getValue();
         const outputDiv = document.getElementById('output');
 
@@ -40,6 +59,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
 
             const result = await response.json();
+            const endTime = new Date();
+            const compilationTime = (endTime - startTime) / 1000;
+            document.getElementById('compilation-time').textContent = `Compilation Time: ${compilationTime}s`;
+
             outputDiv.innerHTML = result.output.replace(/\n/g, '<br>').trim();
         } catch (error) {
             console.error('Error:', error);

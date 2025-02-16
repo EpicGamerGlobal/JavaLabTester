@@ -4,7 +4,8 @@ import path from 'path';
 import {fileURLToPath} from 'url';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-import problems from './problems.json' assert {type: 'json'};
+import problems from './problems.json'; // render throws issue with assert here
+
 
 dotenv.config();
 

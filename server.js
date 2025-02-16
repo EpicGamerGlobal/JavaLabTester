@@ -4,8 +4,17 @@ import path from 'path';
 import {fileURLToPath} from 'url';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-import problems from './problems.json'; // render throws issue with assert here
-
+import problems from './problems.json' with {type: 'json'}; // render throws issue with assert here
+/*
+import problems from './problems.json' assert {type: 'json'};
+                                       ^^^^^^
+SyntaxError: Unexpected identifier 'assert'
+    at compileSourceTextModule (node:internal/modules/esm/utils:338:16)
+    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:102:18)
+    at #translate (node:internal/modules/esm/loader:437:12)
+    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:484:27)
+    at async ModuleJob._link (node:internal/modules/esm/module_job:115:19)
+*/
 
 dotenv.config();
 

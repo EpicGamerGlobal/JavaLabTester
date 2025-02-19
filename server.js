@@ -89,22 +89,18 @@ app.post('/run', async (req, res) => {
         let correctCount = 0;
         let failedResult = "";
         for (const testCase of problem.testCases) {
-            const response = await fetch('https://api.jdoodle.com/v1/execute', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
+            const response = await fetch("https://emkc.org/api/v2/piston/execute", {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
                 body: JSON.stringify({
-                    script: code,
-                    language: 'java',
-                    versionIndex: '0',
-                    clientId: process.env.JDOODLE_CLIENT_ID,
-                    clientSecret: process.env.JDOODLE_CLIENT_SECRET,
-                    stdin: testCase.input // thank you KING
-                }),
+                    language: "java",
+                    version: "15.0.2",
+                    files: [{name: "Main.java", content: code}],
+                    stdin: testCase.input
+                })
             });
             const result = await response.json();
-            console.log(result);
-            console.log(testCase);
-            const output = result.output.trim();
+            const output = result.run.output.trim();
             if (output === testCase.output.trim()) {
                 correctCount++;
             } else {

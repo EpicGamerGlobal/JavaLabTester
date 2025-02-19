@@ -1,210 +1,185 @@
 [
   {
     "id": 1,
-    "title": "Print Hello World",
-    "description": "Write a program that prints 'Hello, World!' to the console.",
+    "title": "Print Hello Kitty's Face",
+    "description": "Write a program that prints an ASCII art of Hello Kitty's face.",
     "difficulty": "Very Easy",
     "hints": [
       "Use System.out.println()",
-      "Ensure output matches exactly"
+      "Each line should be printed separately"
     ],
-    "solution": "public class Main { public static void main(String[] args) { System.out.println(\"Hello, World!\"); } }",
+    "solution": "public class Main { public static void main(String[] args) { System.out.println(\"                     .-.\"); System.out.println(\"          .-._    _.../   `,    _.-.\"); System.out.println(\"          |   `'-'    \\     \\_'`   |\"); System.out.println(\"          \\            '.__,/ `\\_.--,\"); System.out.println(\"           /                '._/     |\"); System.out.println(\"          /                    '.    /\"); System.out.println(\"         ;   _                  _'--;\"); System.out.println(\"      '--|- (_)       __       (_) -|--'\"); System.out.println(\"      .--|-          (__)          -|--.\"); System.out.println(\"       .-\\-                        -/-.\"); System.out.println(\"      '   '.                      .'   `\"); System.out.println(\"            '-._              _.-'\"); System.out.println(\"                `\"\"--....--\"\"`\"); } }",
     "testCases": [
       {
         "input": "None",
-        "output": "Hello, World!"
+        "output": "                     .-.\n          .-._    _.../   `,    _.-.\n          |   `'-'    \\     \\_'`   |\n          \\            '.__,/ `\\_.--,\n           /                '._/     |\n          /                    '.    /\n         ;   _                  _'--;\n      '--|- (_)       __       (_) -|--'\n      .--|-          (__)          -|--.\n       .-\\-                        -/-.\n      '   '.                      .'   `\n            '-._              _.-'\n                `\"\"--....--\"\"`"
       }
     ]
   },
   {
     "id": 2,
-    "title": "Print Your Name",
-    "description": "Write a program that prints your name to the console.",
+    "title": "Hello Kitty's Name",
+    "description": "Store 'Hello Kitty' in a variable and print it.",
     "difficulty": "Very Easy",
     "hints": [
-      "Use System.out.println()",
-      "Replace the string with your actual name"
+      "Use a String variable",
+      "Use System.out.println()"
     ],
-    "solution": "public class Main { public static void main(String[] args) { System.out.println(\"John Doe\"); } }",
+    "solution": "public class Main { public static void main(String[] args) { String name = \"Hello Kitty\"; System.out.println(name); } }",
     "testCases": [
       {
         "input": "None",
-        "output": "John Doe"
+        "output": "Hello Kitty"
       }
     ]
   },
   {
     "id": 3,
-    "title": "Sum of Two Numbers",
-    "description": "Write a program that takes two integers as input and prints their sum.",
+    "title": "Kitty's Age in Cat Years",
+    "description": "Write a program that takes Hello Kitty's age as input and converts it to cat years (multiply by 7).",
     "difficulty": "Easy",
     "hints": [
-      "Use Scanner to take input",
-      "Add the two numbers"
+      "Use Scanner for input",
+      "Multiply by 7"
     ],
-    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int a = sc.nextInt(); int b = sc.nextInt(); System.out.println(a + b); } }",
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int age = sc.nextInt(); System.out.println(age * 7); } }",
     "testCases": [
       {
-        "input": "3 5",
-        "output": "8"
+        "input": "5",
+        "output": "35"
       },
       {
-        "input": "10 20",
-        "output": "30"
+        "input": "10",
+        "output": "70"
       }
     ]
   },
   {
     "id": 4,
-    "title": "Multiply Two Numbers",
-    "description": "Write a program that takes two integers as input and prints their product.",
+    "title": "Kitty's Favorite Food",
+    "description": "Ask the user for Hello Kitty's favorite food and print it.",
     "difficulty": "Easy",
     "hints": [
-      "Use Scanner to take input",
-      "Multiply the two numbers"
+      "Use Scanner.nextLine()",
+      "Store input in a String variable"
     ],
-    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int a = sc.nextInt(); int b = sc.nextInt(); System.out.println(a * b); } }",
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); String food = sc.nextLine(); System.out.println(\"Hello Kitty loves \" + food + \"!\"); } }",
     "testCases": [
       {
-        "input": "2 4",
-        "output": "8"
-      },
-      {
-        "input": "7 3",
-        "output": "21"
+        "input": "Fish",
+        "output": "Hello Kitty loves Fish!"
       }
     ]
   },
   {
     "id": 5,
-    "title": "Check Even or Odd",
-    "description": "Write a program that checks whether a number is even or odd.",
+    "title": "Kitty's Bow Color",
+    "description": "Write a program that asks the user for Hello Kitty's bow color and prints it in uppercase.",
     "difficulty": "Easy",
     "hints": [
-      "Use modulus operator %",
-      "If a number is divisible by 2, it's even"
+      "Use Scanner.nextLine()",
+      "Use .toUpperCase() method"
     ],
-    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int n = sc.nextInt(); if (n % 2 == 0) { System.out.println(\"Even\"); } else { System.out.println(\"Odd\"); } } }",
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); String color = sc.nextLine(); System.out.println(color.toUpperCase()); } }",
     "testCases": [
       {
-        "input": "4",
-        "output": "Even"
-      },
-      {
-        "input": "7",
-        "output": "Odd"
+        "input": "pink",
+        "output": "PINK"
       }
     ]
   },
   {
     "id": 6,
-    "title": "Find the Larger Number",
-    "description": "Write a program that takes two numbers and prints the larger one.",
+    "title": "Kitty's Friendship Check",
+    "description": "Write a program that checks if a name entered by the user is Hello Kitty's best friend, 'Mimi'.",
     "difficulty": "Easy",
     "hints": [
-      "Use an if-else statement",
-      "Compare the two numbers"
+      "Use .equalsIgnoreCase() for string comparison"
     ],
-    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int a = sc.nextInt(); int b = sc.nextInt(); System.out.println(a > b ? a : b); } }",
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); String name = sc.nextLine(); if (name.equalsIgnoreCase(\"Mimi\")) { System.out.println(\"Best friends forever!\"); } else { System.out.println(\"Let's be friends!\"); } } }",
     "testCases": [
       {
-        "input": "8 12",
-        "output": "12"
+        "input": "Mimi",
+        "output": "Best friends forever!"
       },
       {
-        "input": "20 10",
-        "output": "20"
+        "input": "Daniel",
+        "output": "Let's be friends!"
       }
     ]
   },
   {
     "id": 7,
-    "title": "Check Positive, Negative, or Zero",
-    "description": "Write a program that checks if a number is positive, negative, or zero.",
-    "difficulty": "Easy",
+    "title": "Kitty's Age Comparison",
+    "description": "Write a program that asks for an age and checks if it is older or younger than Hello Kitty (48 years old).",
+    "difficulty": "Medium",
     "hints": [
-      "Use an if-else statement",
-      "Compare the number with 0"
+      "Use Scanner to take input",
+      "Use if-else statements"
     ],
-    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int n = sc.nextInt(); if (n > 0) { System.out.println(\"Positive\"); } else if (n < 0) { System.out.println(\"Negative\"); } else { System.out.println(\"Zero\"); } } }",
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int age = sc.nextInt(); if (age > 48) { System.out.println(\"You're older than Hello Kitty!\"); } else { System.out.println(\"You're younger than Hello Kitty!\"); } } }",
     "testCases": [
       {
-        "input": "5",
-        "output": "Positive"
+        "input": "50",
+        "output": "You're older than Hello Kitty!"
       },
       {
-        "input": "-3",
-        "output": "Negative"
-      },
-      {
-        "input": "0",
-        "output": "Zero"
+        "input": "30",
+        "output": "You're younger than Hello Kitty!"
       }
     ]
   },
   {
     "id": 8,
-    "title": "Simple Grade Calculator",
-    "description": "Write a program that takes a student's score and prints their grade (A, B, C, D, or F).",
-    "difficulty": "Easy",
+    "title": "Random Hello Kitty Fact",
+    "description": "Write a program that randomly selects and prints one fun fact about Hello Kitty.",
+    "difficulty": "Medium",
     "hints": [
-      "Use multiple if-else statements",
-      "Compare the score with grade thresholds"
+      "Use Math.random() to generate a random number",
+      "Use an array or if statements for different facts"
     ],
-    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int score = sc.nextInt(); if (score >= 90) { System.out.println(\"A\"); } else if (score >= 80) { System.out.println(\"B\"); } else if (score >= 70) { System.out.println(\"C\"); } else if (score >= 60) { System.out.println(\"D\"); } else { System.out.println(\"F\"); } } }",
+    "solution": "import java.util.Random; public class Main { public static void main(String[] args) { String[] facts = {\"Hello Kitty was created in 1974.\", \"She has a twin sister named Mimi.\", \"Hello Kitty's real name is Kitty White.\", \"She is not a cat, but a little girl!\"}; Random rand = new Random(); System.out.println(facts[rand.nextInt(facts.length)]); } }",
     "testCases": [
       {
-        "input": "85",
-        "output": "B"
-      },
-      {
-        "input": "72",
-        "output": "C"
-      },
-      {
-        "input": "95",
-        "output": "A"
+        "input": "None",
+        "output": "One of the Hello Kitty facts"
       }
     ]
   },
   {
     "id": 9,
-    "title": "Leap Year Checker",
-    "description": "Write a program that checks if a given year is a leap year.",
+    "title": "Kitty's Jump Calculation",
+    "description": "Write a method that calculates how high Hello Kitty can jump based on her weight and energy level.",
     "difficulty": "Medium",
     "hints": [
-      "A leap year is divisible by 4 but not 100 unless also divisible by 400"
+      "Use Math.sqrt() and Math.pow()",
+      "Create a method that returns a value"
     ],
-    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int year = sc.nextInt(); if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)) { System.out.println(\"Leap Year\"); } else { System.out.println(\"Not a Leap Year\"); } } }",
+    "solution": "import java.util.Scanner; public class Main { public static double jumpHeight(double weight, double energy) { return Math.sqrt(energy) / weight; } public static void main(String[] args) { Scanner sc = new Scanner(System.in); double weight = sc.nextDouble(); double energy = sc.nextDouble(); System.out.println(jumpHeight(weight, energy)); } }",
     "testCases": [
       {
-        "input": "2024",
-        "output": "Leap Year"
-      },
-      {
-        "input": "1900",
-        "output": "Not a Leap Year"
+        "input": "3.5 25",
+        "output": "1.43"
       }
     ]
   },
   {
     "id": 10,
-    "title": "Simple Calculator",
-    "description": "Write a program that performs addition, subtraction, multiplication, or division based on user input.",
-    "difficulty": "Medium",
+    "title": "Kitty's Lucky Number",
+    "description": "Write a program that asks the user for a number and checks if it matches Hello Kitty's lucky number (7).",
+    "difficulty": "Easy",
     "hints": [
-      "Use switch-case to handle different operations",
-      "Take two numbers and an operator as input"
+      "Use if-else statements"
     ],
-    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int a = sc.nextInt(); int b = sc.nextInt(); char op = sc.next().charAt(0); switch(op) { case '+': System.out.println(a + b); break; case '-': System.out.println(a - b); break; case '*': System.out.println(a * b); break; case '/': System.out.println(a / b); break; default: System.out.println(\"Invalid operator\"); } } }",
+    "solution": "import java.util.Scanner; public class Main { public static void main(String[] args) { Scanner sc = new Scanner(System.in); int num = sc.nextInt(); if (num == 7) { System.out.println(\"You guessed Hello Kitty's lucky number!\"); } else { System.out.println(\"Try again!\"); } } }",
     "testCases": [
       {
-        "input": "5 3 +",
-        "output": "8"
+        "input": "7",
+        "output": "You guessed Hello Kitty's lucky number!"
       },
       {
-        "input": "10 2 /",
-        "output": "5"
+        "input": "3",
+        "output": "Try again!"
       }
     ]
   }

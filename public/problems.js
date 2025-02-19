@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         problemsList.innerHTML = problems.map(problem => `
             <tr>
                 <td>${problem.id}</td>
-                <td>${problem.title}</td>
+                <td>${problem.title} <span id="solved-${problem.id}" class="solved-indicator" style="display: none;">✔ Solved</span></td>
+                <td><span class="difficulty ${problem.difficulty.toLowerCase()}">${problem.difficulty}</span></td>
                 <td><button onclick="window.location.href='/problem/${problem.id}'">Solve</button></td>
             </tr>
         `).join('');

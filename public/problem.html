@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,10 +17,18 @@
     <h4>Example Test Cases</h4>
     <ul id="test-cases"></ul>
 
+    <div id="hint-container">
+        <button id="hint-button">Show Hint</button>
+        <p id="hint-text"></p>
+        <button id="solution-button" style="display: none;">Show Solution</button>
+        <p id="solution-text" style="display: none;"></p>
+    </div>
+
     <div id="editor-container">
         <h3>Write Your Code:</h3>
         <div id="editor" style="height: 300px; width: 100%;"></div>
         <button id="run-button">Run Code</button>
+        <p id="compilation-time"></p>
     </div>
 
     <div id="output-container">

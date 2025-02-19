@@ -4,7 +4,8 @@ import path from 'path';
 import {fileURLToPath} from 'url';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
-import problems from './problems.json' assert {type: 'json'};
+import problems from './problems.json' with {type: 'json'};
+
 
 dotenv.config();
 
@@ -31,6 +32,7 @@ app.get('/', (req, res) => {
 
 app.post('/login', (req, res) => {
     const {username, password} = req.body;
+    console.log("incoming request==", req.body);
     const user = USERS.find(u => u.username === username && u.password === password);
 
     if (user) {
@@ -83,32 +85,37 @@ app.post('/run', async (req, res) => {
     }
 
     try {
-        const response = await fetch('https://api.jdoodle.com/v1/execute', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({
-                script: code,
-                language: 'java',
-                versionIndex: '0',
-                clientId: process.env.JDOODLE_CLIENT_ID,
-                clientSecret: process.env.JDOODLE_CLIENT_SECRET,
-            }),
-        });
 
-        const result = await response.json();
-        const output = result.output.trim();
         let correctCount = 0;
-
+        let failedResult = "";
         for (const testCase of problem.testCases) {
+            const response = await fetch('https://api.jdoodle.com/v1/execute', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    script: code,
+                    language: 'java',
+                    versionIndex: '0',
+                    clientId: process.env.JDOODLE_CLIENT_ID,
+                    clientSecret: process.env.JDOODLE_CLIENT_SECRET,
+                    stdin: testCase.input // thank you KING
+                }),
+            });
+            const result = await response.json();
+            console.log(result);
+            console.log(testCase);
+            const output = result.output.trim();
             if (output === testCase.output.trim()) {
                 correctCount++;
+            } else {
+                failedResult += "Expected: " + testCase.output + "\nGot: " + output + "\n\n";
             }
         }
 
         if (correctCount === problem.testCases.length) {
             res.json({output: "✅ All test cases passed!"});
         } else {
-            res.json({output: `❌ Some test cases failed.\nExpected: ${problem.testCases[0].output}\nGot: ${output}`});
+            res.json({output: `❌ ${problem.testCases.length - correctCount} out of ${problem.testCases.length} test cases failed.\n${failedResult}`});
         }
     } catch (error) {
         console.error('Error executing code:', error);
